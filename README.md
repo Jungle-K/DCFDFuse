@@ -1,7 +1,12 @@
-# DCFDFuse: A multi-scale image fusion method based on the composite fusion of high-low frequency dual branches.
-![DCFDFuse network](fig/figure.png)
+# Frequency-guided composite infrared-visible image fusion for progressive visual structure and detail learning.
+<img width="2339" height="694" alt="image" src="https://github.com/user-attachments/assets/d10c7020-fb39-4f49-8c7d-102366ca31a3" />
+
 ## abstract
-Multi-modal image fusion aims to combine the strengths of different modalities to create images rich in detail and functionality. However, the complexity of cross-modal feature fusion and the challenges related to the efficient training of fusion networks are significant issues in this field. To address these problems, we propose a novel Dual-branch Composite Frequency Domain fusion network (DCFDFuse). The network first utilizes a shared feature encoder to capture shallow features across modalities. And then, employs a dual-branch Transformer-CNN architecture to separately extract low-frequency features and high-frequency details. We design a Multi-frequency Domain Composite Fusion Block to effectively integrate the frequency domain information. Additionally, a Hybrid Gradient Loss function is introduced, which preserves low-frequency features while enhancing high-frequency characteristics. Extensive experiments demonstrate that DCFDFuse achieves remarkable performance in infrared-visible image fusion, showcasing its significant potential for practical applications.
+Infrared-Visible image fusion aims to integrate complementary information from both imaging modalities to produce images with enhanced visual and semantic details. However, an effective feature fusion for simultaneously modeling visual low-frequency structure and high-frequency details still remain challenging.
+
+To address this issue, we propose a frequency-guided feature composite network in this paper for infrared-visible image fusion. The network begins with a shared feature encoder to extract modality- irrelevant representations, and a dual-branch architecture is designed to separately encode low-frequency structural features and high-frequency detail features. A Two-stage Composite Fusion Module (TCFM) is then elaborated to progressively fuse intra-frequency and inter-frequency features through a combination of intra-block connections and inter-block alignment, enabling more effective feature interaction across frequency domains. In addition, a Pixel-Gradient Hybrid Loss (PGHL) is introduced to jointly constrain pixel-level and gradient-level information, thereby preserving structural features while enhancing visual details.
+
+Extensive experiments on infrared-visible datasets show that our method achieves superior visual quality and quantitative performance improvement when compared with state-of-the-art (SOTA) fusion methods, demonstrating the effectiveness of the proposed frequency-guided feature composite network to progressively strengthen visual structure and detail learning.
 ## Project Structure
 ```plaintext
 |-- core
@@ -35,7 +40,7 @@ Multi-modal image fusion aims to combine the strengths of different modalities t
       - **low_extractor.py**:Low-frequency processing network module
       - **net.py**:Network module
 - **fig**:
-  - The architecture of our DCFDFuse network
+  - The architecture of our network
 - **log**：
     - Save the trained model file. After the training is completed, the model will be saved in this directory for subsequent testing and use
 - **models**：
