@@ -1,4 +1,4 @@
-# Frequency-guided composite infrared-visible image fusion for progressive visual structure and detail learning.
+# Frequency-guided composite infrared-visible image fusion via progressive visual structure and detail learning.
 <img width="2339" height="694" alt="image" src="https://github.com/user-attachments/assets/d10c7020-fb39-4f49-8c7d-102366ca31a3" />
 
 ## abstract
